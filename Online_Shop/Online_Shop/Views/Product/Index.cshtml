@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Online_Shop.DTO.ProductDTO>
+
+<table border="1">
+    <tr>
+        <th>Nazwa</th>
+        <th>Opis</th>
+        <th>Dostępna Ilość</th>
+    </tr>
+
+    @foreach (var productDTO in Model)
+    {
+        <tr>
+            <th>@productDTO.Name</th>
+            <th>@productDTO.Description</th>
+            <th>@productDTO.ProductCopiesCount</th>
+        </tr>
+    }
+</table>
